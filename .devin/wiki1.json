@@ -1,0 +1,284 @@
+The content has been copied to your clipboard. Please paste it here to complete the file creation.{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Module Structure and Organization",
+      "purpose": "Explain the modular design of rtlwifi (core, bus modules, chipset modules), symbol exports, and how the modules interact",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Key Subsystems",
+      "purpose": "Provide a brief overview of major subsystems (HAL, power management, BT coexistence, data path) and their purposes",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Architecture",
+      "purpose": "Document the fundamental architecture patterns including hardware abstraction, central context structures, and initialization flow",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Hardware Abstraction Layer (HAL)",
+      "purpose": "Detail the rtl_hal_ops structure with its 70+ function pointers and how it enables chipset-agnostic driver code",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Central Context (rtl_priv)",
+      "purpose": "Document the rtl_priv structure that serves as the central context containing all driver state, sub-structures, and configuration",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Driver Initialization",
+      "purpose": "Explain the initialization sequence including rtl_init_core, deferred work setup, mac80211 integration, and resource allocation",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Hardware Register Access",
+      "purpose": "Document the HW_VAR_* abstraction layer and register access patterns (rtl_read/write functions)",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Hardware Support",
+      "purpose": "Overview of bus interfaces (PCI/USB) and chipset-specific implementations",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "PCI Bus Interface",
+      "purpose": "Document the PCI driver including probe/disconnect, DMA setup, interrupt handling, and rtl_intf_ops implementation",
+      "parent": "Hardware Support",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Ring Buffer Architecture",
+      "purpose": "Detail TX/RX ring buffer management, descriptor formats (old vs new TRX flow), and DMA coordination",
+      "parent": "Hardware Support",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Interrupt Handling",
+      "purpose": "Explain the interrupt service routines, tasklet usage, and per-queue interrupt processing",
+      "parent": "Hardware Support",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Chipset Implementations",
+      "purpose": "Document specific chipset support (RTL8192SE, RTL8192CE, RTL8723BE, RTL8821AE) and their HAL implementations",
+      "parent": "Hardware Support",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "ASPM Power Management",
+      "purpose": "Explain Active State Power Management configuration, hardware-specific workarounds, and runtime control",
+      "parent": "Hardware Support",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Power Management",
+      "purpose": "Overview of the multi-level power management architecture and RF power states",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "RF Power States",
+      "purpose": "Document the ERFON/ERFOFF/ERFSLEEP states and rtl_ps_set_rf_state state machine",
+      "parent": "Power Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Low Power State (LPS)",
+      "purpose": "Detail firmware-controlled LPS including rtl_lps_enter/leave, EAUTOPS/EACTIVE modes, and traffic-based transitions",
+      "parent": "Power Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Inactive Power Save (IPS)",
+      "purpose": "Explain IPS idle timeout mechanism, rtl_ips_nic_on, and deep sleep during inactivity",
+      "parent": "Power Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Software LPS (SWLPS)",
+      "purpose": "Document beacon-synchronized sleep, DTIM-based wake scheduling, and rtl_swlps_beacon processing",
+      "parent": "Power Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "P2P Power Save",
+      "purpose": "Explain P2P-specific power modes including NOA (Notice of Absence) and CTWindow (Opportunistic PS)",
+      "parent": "Power Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Bluetooth Coexistence",
+      "purpose": "Overview of the BT coexistence subsystem that manages WiFi/BT interference on shared 2.4GHz spectrum",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "BTC Framework and Interface",
+      "purpose": "Document the btc_coexist interface, btc_get/btc_set operations, and notification pipeline",
+      "parent": "Bluetooth Coexistence",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Status Tracking and Information Flow",
+      "purpose": "Explain coex_sta structures, BT info sources, profile detection (SCO/A2DP/HID/PAN), and RSSI monitoring",
+      "parent": "Bluetooth Coexistence",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Algorithm Selection",
+      "purpose": "Detail the 11 coexistence algorithms and how they're selected based on BT profile combinations",
+      "parent": "Bluetooth Coexistence",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Coexistence Mechanisms",
+      "purpose": "Document PS-TDMA, coex tables, antenna path control, power reduction, and rate penalties",
+      "parent": "Bluetooth Coexistence",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Management (coex_dm)",
+      "purpose": "Explain the coex_dm structures containing firmware and software mechanism parameters",
+      "parent": "Bluetooth Coexistence",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Data Path",
+      "purpose": "Overview of packet transmission and reception flows through the driver",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Transmit Path",
+      "purpose": "Document TX flow including rtl_get_tcb_desc, queue selection, descriptor filling, and special packet handling",
+      "parent": "Data Path",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Receive Path",
+      "purpose": "Explain RX flow including descriptor parsing, action frame processing, and packet delivery to mac80211",
+      "parent": "Data Path",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
